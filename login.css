@@ -1,0 +1,115 @@
+body {
+    background: red;
+}
+
+header a {
+    float: right;
+    margin: 10px 20px;
+}
+
+main {
+    width: 100%;
+    height: calc(100% - 52px);
+    background: red;
+}
+
+main .flip-modal {
+    display: none;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: white;
+    width: 400px;
+}
+
+.flip-modal.active {
+    display: block;
+}
+
+.flip-modal.login .modal-login {
+    transform: translate(-50%, -50%) rotateY(0);
+    backface-visibility: hidden;
+    transition: all 1s;
+}
+
+.flip-modal.register .modal-login {
+    transform: translate(-50%, -50%) rotateY(180deg);
+    backface-visibility: hidden;
+    transition: all 1s;
+}
+
+.flip-modal.login .modal-register {
+    transform: translate(-50%, -50%) rotateY(180deg);
+    backface-visibility: hidden;
+    transition: all 1s;
+}
+
+.flip-modal.register .modal-register {
+    transform: translate(-50%, -50%) rotateY(0);
+    backface-visibility: hidden;
+    transition: all 1s;
+}
+
+.modal-login {
+    display: block;
+    padding: 16px;
+}
+
+.modal-register {
+    display: block;
+    padding: 16px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.tabs {
+    text-align: center;
+}
+
+.tabs a {
+    font-size: 16px;
+    margin: 0 10px;
+    color: black;
+}
+
+.tabs a.active {
+    border-bottom: 2px solid;
+}
+
+.content {
+    padding: 20px 40px;
+}
+
+.content .error-text {
+    font-size: 14px;
+    color: red;
+    margin-bottom: 5px;
+    display: none;
+}
+.content .error-text.active {
+    display: inline;
+}
+
+.content .username {
+    border: 1px solid;
+    padding: 5px 10px;
+}
+
+.content .password {
+    border: 1px solid;
+    padding: 5px 10px;
+    margin: 10px 0;
+}
+
+.content .submit {
+    padding: 5px 10px;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
