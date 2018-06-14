@@ -1,16 +1,18 @@
 body {
-    background: red;
+    background: url(http://img1.gamersky.com/image2018/06/20180602_zl_91_4/gamersky_05origin_09_2018621851485.jpg) no-repeat center center;
+    background-size:cover;
 }
 
 header a {
     float: right;
     margin: 10px 20px;
+    color:black;
 }
 
 main {
     width: 100%;
     height: calc(100% - 52px);
-    background: red;
+    
 }
 
 main .flip-modal {
@@ -23,6 +25,7 @@ main .flip-modal {
     left: 50%;
     background: white;
     width: 400px;
+    box-shadow:0 0 50px 5px rgba(0, 0, 0, 0.5);
 }
 
 .flip-modal.active {
